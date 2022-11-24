@@ -92,6 +92,10 @@ set lazyredraw
 set redrawtime=100000
 set re=1
 
+"auto reload while file changed
+set autoread
+au CursorHold * checktime
+
 "colorscheme desert
 colorscheme webberwu
 
