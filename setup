@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+PWD=$(pwd)
+NVIM_DIR=$HOME/.config/nvim
+
+ln -sfnv $PWD $NVIM_DIR
