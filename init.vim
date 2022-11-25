@@ -182,6 +182,10 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme='powerlineish'
 let g:airline_section_warning = airline#section#create_right(['%{gutentags#statusline()}', 'ycm_warning_count', 'whitespace'])
 
+" vim-fugitive
+nnoremap gbb <cmd>Git blame<CR>
+autocmd FileType fugitiveblame nmap <C-t> O
+
 "vim-gutentags
 let g:gutentags_cache_dir = '~/.cache/vim-gutentags'
 let g:gutentags_project_root = ['.git', '.project', '.vimtag']
