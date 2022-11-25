@@ -70,6 +70,7 @@ set fileencoding=utf-8
 set fileencodings=utf-8,ucs-bom,big5
 set mouse=
 set modeline
+set nohidden
 set cursorline
 set background=dark
 set nocompatible
