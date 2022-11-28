@@ -33,8 +33,10 @@ Plug 'mattn/emmet-vim'
 Plug 'mgedmin/python-imports.vim', { 'for': 'python' }
 Plug 'mkitt/tabline.vim'
 Plug 'numToStr/Comment.nvim'
+Plug 'nvim-tree/nvim-tree.lua'
 Plug 'nvim-tree/nvim-web-devicons'
 " telescope dependency
+" brew install ripgrep
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 Plug 'pageer/pdv', { 'for': 'php' }
@@ -56,6 +58,9 @@ Plug 'vim-airline/vim-airline-themes'
 " need to install phpctags: `composer global require techlivezheng/phpctags`
 Plug 'vim-php/tagbar-phpctags.vim'
 call plug#end()
+
+lua require('plugins-setup')
+lua require('keymaps')
 
 syntax on
 
@@ -291,9 +296,6 @@ autocmd FileType go inoremap <buffer> . .<C-x><C-o>
 autocmd FileType go inoremap <buffer> <C-n> <C-x><C-o>
 autocmd FileType go nmap <C-o> <Plug>(go-def-tab)
 
-" numToStr/Comment.nvim
-lua require('Comment').setup()
-
 " neoclide/coc.nvim
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
@@ -319,24 +321,18 @@ if has('nvim-0.4.0') || has('patch-8.2.0750')
 endif
 " Mappings for CoCList
 " Show all diagnostics.
-nnoremap <silent><nowait> <space>a :<C-u>CocList diagnostics<cr>
+nnoremap <silent><nowait> <space>ca :<C-u>CocList diagnostics<cr>
 " Manage extensions.
-nnoremap <silent><nowait> <space>e :<C-u>CocList extensions<cr>
+nnoremap <silent><nowait> <space>ce :<C-u>CocList extensions<cr>
 " Show commands.
-nnoremap <silent><nowait> <space>c :<C-u>CocList commands<cr>
+nnoremap <silent><nowait> <space>cc :<C-u>CocList commands<cr>
 " Find symbol of current document.
-nnoremap <silent><nowait> <space>o :<C-u>CocList outline<cr>
+nnoremap <silent><nowait> <space>co :<C-u>CocList outline<cr>
 " Search workspace symbols.
-nnoremap <silent><nowait> <space>s :<C-u>CocList -I symbols<cr>
+nnoremap <silent><nowait> <space>cs :<C-u>CocList -I symbols<cr>
 " Do default action for next item.
-nnoremap <silent><nowait> <space>j :<C-u>CocNext<CR>
+nnoremap <silent><nowait> <space>cj :<C-u>CocNext<CR>
 " Do default action for previous item.
-nnoremap <silent><nowait> <space>k :<C-u>CocPrev<CR>
+nnoremap <silent><nowait> <space>ck :<C-u>CocPrev<CR>
 " Resume latest coc list.
-nnoremap <silent><nowait> <space>p :<C-u>CocListResume<CR>
-
-" nvim-telescope/telescope.nvim
-" brew install ripgrep
-nnoremap <C-p> <cmd>Telescope find_files<cr>
-nnoremap <C-g>b <cmd>Telescope git_branches<cr>
-nnoremap <C-g>g <cmd>Telescope live_grep<cr>
+nnoremap <silent><nowait> <space>cp :<C-u>CocListResume<CR>
