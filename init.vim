@@ -57,6 +57,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 " need to install phpctags: `composer global require techlivezheng/phpctags`
 Plug 'vim-php/tagbar-phpctags.vim'
+Plug 'patstockwell/vim-monokai-tasty'
 call plug#end()
 
 lua require('plugins-setup')
@@ -102,8 +103,14 @@ set re=1
 set autoread
 au CursorHold * checktime
 
-"colorscheme desert
-colorscheme webberwu
+if (has("termguicolors"))
+  set termguicolors
+  let g:vim_monokai_tasty_machine_tint = 1
+  colorscheme vim-monokai-tasty
+else
+  "colorscheme desert
+  colorscheme webberwu
+end
 
 set laststatus=2
 set statusline=%0*\ %{fugitive#statusline()}\ %*
