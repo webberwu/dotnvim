@@ -43,7 +43,6 @@ Plug 'pageer/pdv', { 'for': 'php' }
 Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
 Plug 'plasticboy/vim-markdown', { 'for': 'md' }
 Plug 'ryanoasis/vim-devicons'
-Plug 'scrooloose/nerdtree'
 Plug 'SirVer/ultisnips'
 Plug 'StanAngeloff/php.vim', { 'for': 'php' }
 Plug 'terryma/vim-multiple-cursors'
@@ -79,7 +78,6 @@ set modeline
 set nohidden
 set cursorline
 set background=dark
-set nocompatible
 set backspace=indent,eol,start
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
 set history=100
@@ -87,8 +85,6 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set showtabline=2                     " always show tab
-set wildmode=longest,list             " use emacs-style tab completion when selecting files, etc
-set wildmenu                          " make tab completion for files/buffers act like bash
 set tags+=tags,tags.vendors
 set autoindent
 set smartindent
@@ -111,20 +107,6 @@ else
   "colorscheme desert
   colorscheme webberwu
 end
-
-set laststatus=2
-set statusline=%0*\ %{fugitive#statusline()}\ %*
-set statusline+=%2*\ %*
-set statusline+=%3*%m%r%*
-set statusline+=%2*%f\ %*
-set statusline+=%1*\ %{&ff},%{&fileencoding}%Y%H%W
-set statusline+=%=%*
-set statusline+=%1*\ dec:\%3.b,\ hex:\%2.B\ %*
-set statusline+=%2*\ row:%4.l/%4.L,\ col:%3.c\ %*
-set statusline+=%0*\ %3.p%%\ %*
-highlight User1 cterm=none ctermbg=235 ctermfg=grey
-highlight User2 cterm=none ctermbg=237 ctermfg=white
-highlight User3 cterm=none ctermbg=237 ctermfg=darkred
 
 filetype plugin indent on
 
@@ -163,9 +145,6 @@ let g:pdv_cfg_Uses = 1
 let g:pdv_template_dir = $HOME . '/.vim/plugged/pdv/templates_snip'
 nnoremap <C-K> :call pdv#DocumentWithSnip()<CR> :%s/\s\+$//<CR>
 vnoremap <C-K> :call pdv#DocumentWithSnip()<CR> :%s/\s\+$//<CR>
-
-"nerdtree
-let NERDTreeShowHidden = 1
 
 "tagbar
 nmap mm :TagbarToggle<CR>
