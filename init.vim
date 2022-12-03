@@ -13,13 +13,13 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'andymass/vim-matchup'
 Plug 'arnaud-lb/vim-php-namespace', { 'for': 'php' }
 Plug 'avakhov/vim-yaml', { 'for': ['yml', 'yaml'] }
-Plug 'dense-analysis/ale'
 Plug 'dietsche/vim-lastplace'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'fatih/vim-go', { 'for': 'go' }
 " usage: :Tabularize /|
 Plug 'godlygeek/tabular'
 Plug 'honza/vim-snippets'
+Plug 'jose-elias-alvarez/null-ls.nvim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align'
@@ -244,21 +244,6 @@ autocmd FileType python nnoremap <C-i> :ImportName<CR>
 " refs. https://github.com/ryanoasis/nerd-fonts#font-installation
 " install font on macOS
 " cd ~/Library/Fonts && curl -fLo 'Droid Sans Mono for Powerline Nerd Font Complete.otf' https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
-
-" dense-analysis/ale
-let g:airline#extensions#ale#enabled = 1
-let g:ale_lint_on_save = 1
-let g:ale_lint_on_insert_leave = 0
-let g:ale_lint_on_enter = 0
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_open_list = 1
-let g:ale_php_phpcs_standard = 'PSR12'
-let g:ale_php_phpcs_options = '--exclude=PSR1.Files.SideEffects'
-let g:ale_python_auto_pipenv = 1
-let g:ale_python_pylint_options = '--disable=line-too-long,missing-docstring,too-few-public-methods'
-let g:ale_linters = {
-        \'php': ['php', 'phpcs']
-    \}
 
 " SirVer/ultisnips
 let g:UltiSnipsExpandTrigger = '<tab>'
