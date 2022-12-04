@@ -112,6 +112,7 @@ filetype plugin indent on
 
 autocmd BufNewFile,BufRead *.yml set filetype=yaml
 autocmd FileType crontab set nobackup nowritebackup
+autocmd FileType php set colorcolumn=120
 
 highlight ExtraWhitespace ctermbg=1 guibg=red
 match ExtraWhitespace /\s\+$/
