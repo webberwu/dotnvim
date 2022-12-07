@@ -13,6 +13,7 @@ local keymap = vim.keymap
 
 keymap.set("", "ms", "^", { noremap = true })
 keymap.set("", "me", "$", { noremap = true })
+keymap.set("n", "mh", "<cmd>nohlsearch<cr>", { noremap = true })
 
 -- plugins
 
