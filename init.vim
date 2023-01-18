@@ -15,7 +15,6 @@ Plug 'arnaud-lb/vim-php-namespace', { 'for': 'php' }
 Plug 'avakhov/vim-yaml', { 'for': ['yml', 'yaml'] }
 Plug 'dietsche/vim-lastplace'
 Plug 'ekalinin/Dockerfile.vim'
-Plug 'fatih/vim-go', { 'for': 'go' }
 " usage: :Tabularize /|
 Plug 'godlygeek/tabular'
 Plug 'honza/vim-snippets'
@@ -232,8 +231,6 @@ let g:fzf_colors = {
 " phpactor/phpactor
 " Include use statement
 autocmd FileType php nnoremap <C-u> :call phpactor#UseAdd()<CR>
-" Goto definition of class or class member under the cursor
-autocmd FileType php nnoremap <C-o> :call phpactor#GotoDefinition()<CR>
 " Show brief information about the symbol under the cursor
 autocmd FileType php nnoremap <C-h> :call phpactor#Hover()<CR>
 autocmd FileType php setlocal omnifunc=phpactor#Complete
@@ -250,20 +247,3 @@ autocmd FileType python nnoremap <C-i> :ImportName<CR>
 let g:UltiSnipsExpandTrigger = '<tab>'
 let g:UltiSnipsJumpForwardTrigger = '<tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<S-tab>'
-
-" fatih/vim-go
-let g:go_auto_type_info = 1
-let g:go_autodetect_gopath = 1
-let g:go_fmt_command = 'goimports'
-let g:go_highlight_build_constraints = 1
-let g:go_highlight_fields = 1
-let g:go_highlight_functions = 1
-let g:go_highlight_function_calls = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_structs = 1
-let g:go_null_module_warning = 0
-
-autocmd FileType go inoremap <buffer> . .<C-x><C-o>
-autocmd FileType go inoremap <buffer> <C-n> <C-x><C-o>
-autocmd FileType go nmap <C-o> <Plug>(go-def-tab)
