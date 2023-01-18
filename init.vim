@@ -130,9 +130,6 @@ set foldlevelstart=99
 noremap me $
 noremap ms ^
 noremap .rs :%s/\s\+$//<CR>
-noremap gb :Buffers<CR>
-noremap gbp :bp<CR>
-noremap gbn :bn<CR>
 nnoremap <silent> cu :set undoreload=0 \| edit<CR>
 inoremap jj <ESC>
 inoremap jm $
