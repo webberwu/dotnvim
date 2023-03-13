@@ -90,9 +90,10 @@ set smartindent
 set smarttab
 set virtualedit=block
 "set autochdir
-set lazyredraw
-set redrawtime=100000
-set re=1
+" https://neovim.io/doc/user/options.html#'regexpengine'
+" https://dev.to/ronenlaufer/comment/1d702
+" avoid "redrawtime exceeded syntax highlighting disabled" error when opening TS file after seeting coc.nvim
+set regexpengine=0
 
 "auto reload while file changed
 set autoread
