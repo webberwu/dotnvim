@@ -21,6 +21,6 @@ keymap.set("n", "mh", "<cmd>nohlsearch<cr>", { noremap = true })
 keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<cr>")
 
 -- nvim-telescope
-keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>")
+keymap.set("n", "<leader>ff", "<cmd>Telescope find_files hidden=true<cr>")
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>")
 keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<cr>")
