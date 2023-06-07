@@ -55,6 +55,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 " need to install phpctags: `composer global require techlivezheng/phpctags`
 Plug 'vim-php/tagbar-phpctags.vim'
+Plug 'WhoIsSethDaniel/toggle-lsp-diagnostics.nvim'
 Plug 'patstockwell/vim-monokai-tasty'
 call plug#end()
 
