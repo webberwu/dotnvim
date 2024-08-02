@@ -95,6 +95,8 @@ set virtualedit=block
 " https://dev.to/ronenlaufer/comment/1d702
 " avoid "redrawtime exceeded syntax highlighting disabled" error when opening TS file after seeting coc.nvim
 set regexpengine=0
+" 避免 * 搜尋單詞把 $ 視為同一個單詞
+set iskeyword-=$
 
 "auto reload while file changed
 set autoread
