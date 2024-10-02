@@ -65,7 +65,6 @@ lua require('keymaps')
 syntax on
 
 set t_Co=256
-set clipboard+=unnamedplus
 set incsearch
 set hlsearch
 set number
