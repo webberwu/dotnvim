@@ -22,6 +22,7 @@ Plug 'jose-elias-alvarez/null-ls.nvim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align'
+Plug 'jwalton512/vim-blade'
 Plug 'kristijanhusak/vim-carbon-now-sh'
 Plug 'lewis6991/impatient.nvim'
 Plug 'ludovicchabant/vim-gutentags'
