@@ -137,6 +137,7 @@ set foldlevelstart=99
 
 noremap me $
 noremap ms ^
+noremap mk :set iskeyword-=$<CR>
 noremap .rs :%s/\s\+$//<CR>
 nnoremap <silent> cu :set undoreload=0 \| edit<CR>
 inoremap jj <ESC>
