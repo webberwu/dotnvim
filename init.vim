@@ -27,7 +27,7 @@ Plug 'kristijanhusak/vim-carbon-now-sh'
 Plug 'lewis6991/impatient.nvim'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'lukas-reineke/indent-blankline.nvim'
-Plug 'taoso/phpcd.vim', { 'branch': 'php8', 'for': 'php', 'do': 'composer install' }
+" Plug 'taoso/phpcd.vim', { 'branch': 'php8', 'for': 'php', 'do': 'composer install' }
 Plug 'majutsushi/tagbar'
 Plug 'mattn/emmet-vim'
 Plug 'mgedmin/python-imports.vim', { 'for': 'python' }
