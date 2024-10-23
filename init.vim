@@ -115,6 +115,8 @@ end
 
 filetype plugin indent on
 
+" https://blog.gslin.org/archives/2024/10/18/12038/
+autocmd BufEnter * syntax sync fromstart
 autocmd BufNewFile,BufRead *.yml set filetype=yaml
 autocmd FileType crontab set nobackup nowritebackup
 autocmd FileType php set colorcolumn=120
