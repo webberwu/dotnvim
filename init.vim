@@ -41,7 +41,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
 Plug 'pageer/pdv', { 'for': 'php' }
 Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
-Plug 'plasticboy/vim-markdown', { 'for': 'md' }
+Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 Plug 'posva/vim-vue'
 Plug 'ryanoasis/vim-devicons'
 Plug 'SirVer/ultisnips'
@@ -59,10 +59,15 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-php/tagbar-phpctags.vim'
 Plug 'WhoIsSethDaniel/toggle-lsp-diagnostics.nvim'
 Plug 'patstockwell/vim-monokai-tasty'
-call plug#end()
 
-lua require('plugins-setup')
-lua require('keymaps')
+Plug 'yetone/avante.nvim', { 'branch': 'main', 'do': 'make' }
+" avante deps
+Plug 'stevearc/dressing.nvim'
+Plug 'MunifTanjim/nui.nvim'
+" avante optional deps
+Plug 'HakonHarnes/img-clip.nvim'
+Plug 'OXY2DEV/markview.nvim'
+call plug#end()
 
 syntax on
 
@@ -253,3 +258,6 @@ autocmd FileType python nnoremap <C-i> :ImportName<CR>
 let g:UltiSnipsExpandTrigger = '<tab>'
 let g:UltiSnipsJumpForwardTrigger = '<tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<S-tab>'
+
+lua require('plugins-setup')
+lua require('keymaps')
